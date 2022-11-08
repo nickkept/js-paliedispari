@@ -1,34 +1,25 @@
-// const parola1 = prompt(`Inserisci Parola1`);
-// const parolaUtente2 = prompt(`Inserisci Parola2`);
-// console.log(parolaUtente1, parolaUtente2);
-// const reverseWordIntoString = str => str.split(" ").map(word => word.split("").reverse().join('')).join(" ")
+const parola1 = prompt(`Inserisci Parola1`);
 
-
-const parola1 = "anna";
-// const parola2 = "abcd";
-
-
-// const output = {
-
-//     [parola1]: reverseWordIntoString(parola1)
-// }
-// console.log(output);
-
-
-// if(parola1 === output){
-//     console.log(`La parola inserita e' palindroma`);
-// }
-
-
+/**Funzione che fa il reverse della parola, facendo lo split in lettere messe in un array per poi fare il reverse e rimetterle insieme
+ * 
+ * @param {*} string 
+ * @returns 
+ */
 function reverseString(string) {
     return string.split('').reverse().join('');
 
 }
+/**Funzione che prende il parola scritta dall`utente e dopo aver fatto il reverse, controlla se la parola originale e` uguale al reverse e mi da il risultato
+ * 
+ * @param {Parola} parola1 
+ * @returns risultato 
+ */
 function palindCheck(parola1) {
-    const risultato = parola1
     if (parola1 === reverseString(parola1)) {
-        console.log(parola1);
-    } else {
-        console.log('Questa parola è palindroma');
+        return 'Questa parola è palindroma';
+    }else{
+        return 'Questa parola non è palindroma';
     }
 }
+const risultato = palindCheck(parola1);
+console.log(risultato);
